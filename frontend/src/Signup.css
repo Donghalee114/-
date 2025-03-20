@@ -1,0 +1,89 @@
+/* ✅ Signup.css - 회원가입 페이지 스타일 */
+* {
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #28a745, #20c997);
+  }
+  
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .signup-box {
+    width: 360px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .input-field:focus {
+    border-color: #28a745;
+    outline: none;
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .signup-button:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+  }
+  
+  .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  

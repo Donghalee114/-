@@ -1,0 +1,159 @@
+/* ✅ 전체 스타일 초기화 */
+* {
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ✅ 네비게이션 바 - 최상단 고정 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between; /* 🔹 왼쪽(타이틀) / 오른쪽(버튼) */
+  align-items: center;
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  padding: 10px 20px;
+  color: white;
+  z-index: 1000;
+}
+
+/* ✅ 제목 (왼쪽 정렬) */
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ✅ 버튼 컨테이너 (오른쪽 정렬) */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ✅ 버튼 스타일 */
+.button {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.button:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* ✅ 로그아웃 버튼 (다른 색상) */
+.logout {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.logout:hover {
+  background: #c82333;
+}
+
+/* ✅ 게시판 컨테이너 */
+.board-container {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 80px; /* 🔹 네비게이션 바 아래에 여백 확보 */
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ 게시글 목록 (왼쪽부터 정렬, 부족하면 자동 줄바꿈) */
+.post-list {
+  display: flex;
+  flex-wrap: wrap; /* 🔹 가로 정렬 후 공간 부족하면 줄바꿈 */
+  gap: 20px; /* 🔹 박스 간 간격 */
+  align-items: flex-start; /* 🔹 위쪽 정렬 */
+  padding: 10px;
+}
+
+/* ✅ 개별 게시글 카드 */
+.post-card {
+  width: calc(13.333% - 20px); /* 🔹 3개씩 정렬되도록 설정 (화면 크기에 따라 자동 조절) */
+  min-width: 300px;
+  height: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ 게시글 제목 스타일 */
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+/* ✅ 게시글 정보 (작성자 & 날짜) */
+.post-meta {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* ✅ 게시글이 없을 때 메시지 */
+.no-posts {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* ✅ 반응형 설정 (모바일에서 2개씩 배치) */
+@media (max-width: 1024px) {
+  .post-card {
+      width: calc(50% - 20px); /* 🔹 화면 크기 작아지면 2개씩 배치 */
+  }
+}
+
+/* ✅ 모바일 (1개씩 정렬) */
+@media (max-width: 600px) {
+  .post-card {
+      width: 100%; /* 🔹 작은 화면에서는 한 줄에 하나씩 */
+  }
+}
